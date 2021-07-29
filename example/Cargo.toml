@@ -1,0 +1,13 @@
+[package]
+name = "clang-ebpf-builder-example"
+version = "0.1.0"
+authors = ["Simone Margaritelli <evilsocket@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+# TODO: replace this with an actual version as soon as the fix for tracepoints is released
+aya = { git = "https://github.com/alessandrod/aya", branch = "main" }
+lazy_static = "1.4.0"
+
+[build-dependencies]
+clang-ebpf-builder = { path = "../builder"}

@@ -138,6 +138,7 @@ pub fn build(input: &str, output: &str, includes: Option<PathBuf>) -> Result<Bui
         .args(&["-I", &format!("{}/include/generated/uapi", ctx.kernel_base)])
         .args(&["-I", &user_inc])
         .args(&["-I", &ctx.user_include])
+        .args(&["-I", "/usr/include/"]) // standard userland includes
         .arg("-Wno-everything")
         .arg("-fno-stack-protector") // avoids "A call to built-in function '__stack_chk_fail' is not supported."
         .arg("-fno-jump-tables")
